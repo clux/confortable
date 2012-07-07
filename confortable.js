@@ -3,7 +3,7 @@ var fs   = require('fs')
 
 module.exports = function (name) {
   var cwd = process.cwd()
-    , exists = fs.existsSync || path.existsSync
+    , exists = fs.existsSync || fs.existsSync
     , cfg;
 
   if (path.relative(process.env.HOME, cwd).slice(0, 2) === '..') {
