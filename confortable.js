@@ -1,11 +1,11 @@
 var fs   = require('fs')
-  , path = require('path');
+  , path = require('path')
+  , exists = fs.existsSync || path.existsSync;
 
-module.exports = function (name) {
-  var cwd = process.cwd()
-    , exists = fs.existsSync || path.existsSync
-    , cfg;
+module.exports = function (name, cwd) {
+  var cfg;
 
+  cwd = cwd || process.cwd();
   if (path.relative(process.env.HOME, cwd).slice(0, 2) === '..') {
     // cwd is outside home, check cwd only
     cfg = path.join(cwd, name);
