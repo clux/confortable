@@ -9,7 +9,7 @@ Basic usage:
 
 ````javascript
 var conf = require('confortable');
-confPath = conf('.logule'); // if non-null, this can be read by fs or required if js compatible
+confPath = conf('.confName'); // if non-null, this can be read by fs or required if js compatible
 ````
 
 Optionally, a start directory (if cwd isn't sufficient) can be specified for the search start:
@@ -17,6 +17,13 @@ Optionally, a start directory (if cwd isn't sufficient) can be specified for the
 ````javascript
 var confPath = require('confortable')('.combustion', templateDir);
 ````
+
+A final optional setting is a fallback directory, in case the recursive search fails, but you still want to see if a config exists somewhere else (like say the path of the parent module). In this use case, you have to specify the start as well.
+
+````javascript
+var fallback = require('path').dirname(module.parent.filename);
+var confPath = require('confortable')('.logule', process.cwd(), fallback);
+```
 
 ## Installation
 

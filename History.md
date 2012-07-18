@@ -1,0 +1,17 @@
+0.1.3 / 2012-07-18
+==================
+  * Allow a fallback directory to be scanned if original search fails
+  * Improve search corner cases (particularly for windows)
+
+0.1.2 / 2012-07-14
+==================
+  * Fix scanning algorithm for windows directories
+
+0.1.1 / 2012-07-13
+==================
+  * Allow custom start directory
+
+0.1.0 / 2012-07-03
+==================
+  * First proper version
+
