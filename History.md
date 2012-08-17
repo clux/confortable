@@ -1,3 +1,7 @@
+0.1.4 / 2012-07-17
+==================
+  * Fixed a bug with fallback dir overriding cwd search
+
 0.1.3 / 2012-07-18
 ==================
   * Allow a fallback directory to be scanned if original search fails
