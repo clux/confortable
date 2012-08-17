@@ -41,7 +41,7 @@ var findFromStart = function (name, start) {
 
 module.exports = function (name, start, fallbackDir) {
   var result = findFromStart(name, start);
-  if (!fallbackDir) {
+  if (result || !fallbackDir) {
     return result;
   }
   var fbPath = path.join(fallbackDir, name);
