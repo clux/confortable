@@ -12,7 +12,12 @@ var findFromStart = function (name, start) {
   if (noRelation || isAbove) {
     // start is outside home, check start only
     cfg = path.join(start, name);
-    return existsSync(cfg) ? cfg : null;
+    if (existsSync(cfg)) {
+      return cfg;
+    } else {
+      var homeCfg = path.join(process.env.HOME, name );
+      return existsSync(homeCfg) ? homeCfg : null;
+    }
   }
   else {
     // start is somewhere under HOME start, so start there and go up until we hit HOME
