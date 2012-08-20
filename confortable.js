@@ -14,9 +14,10 @@ var findFromStart = function (name, start) {
     cfg = path.join(start, name);
     if (existsSync(cfg)) {
       return cfg;
-    } else {
-      var homeCfg = path.join(process.env.HOME, name );
-      return existsSync(homeCfg) ? homeCfg : null;
+    }
+    else {
+      cfg = path.join(process.env.HOME, name);
+      return existsSync(cfg) ? cfg : null;
     }
   }
   else {
@@ -51,4 +52,4 @@ module.exports = function (name, start, fallbackDir) {
   }
   var fbPath = path.join(fallbackDir, name);
   return (existsSync(fbPath)) ? fbPath : null;
-}
+};

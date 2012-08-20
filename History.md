@@ -1,3 +1,7 @@
+0.1.5 / 2012-07-20
+==================
+  * Search for configs in HOME even if start directory is outside it.
+
 0.1.4 / 2012-07-17
 ==================
   * Fixed a bug with fallback dir overriding cwd search
