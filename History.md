@@ -1,3 +1,9 @@
+0.2.0 / 2012-10-26
+==================
+  * Neaten up code + more tests
+  * Change no-found config from `null` to `undefined`
+  * remove node 0.6 support
+
 0.1.5 / 2012-07-20
 ==================
   * Search for configs in HOME even if start directory is outside it.
