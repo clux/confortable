@@ -1,20 +1,21 @@
 var exists = require('fs').existsSync
-  , path = require('path');
+  , path = require('path')
+  , HOME = process.env.HOME || process.env.HOMEDRIVE + process.env.HOMEPATH;
 
 var withinHome = function (dir) {
-  return (path.relative(process.env.HOME, dir).slice(0, 2) !== '..');
+  return (path.relative(HOME, dir).slice(0, 2) !== '..');
 };
 
 var findFromStart = function (name, start) {
   start = start || process.cwd();
-  var relative = path.relative(process.env.HOME, start)
+  var relative = path.relative(HOME, start)
     , noRelation = (relative === start) // i.e. different drive or undefined HOME
     , isAbove = (relative.slice(0, 2) === '..');
 
   if (noRelation || isAbove) {
     // start is outside HOME: check start and HOME only
     var startCfg = path.join(start, name)
-      , homeCfg = path.join(process.env.HOME, name);
+      , homeCfg = path.join(HOME, name);
 
     if (exists(startCfg)) {
       return startCfg;
