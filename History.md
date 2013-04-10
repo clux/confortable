@@ -1,3 +1,7 @@
+0.2.1 / 2013-04-10
+==================
+  * Better windows support by using env.HOMEDIR and env.HOMEDRIVE (thanks agsh)
+
 0.2.0 / 2012-10-26
 ==================
   * Neaten up code + more tests
