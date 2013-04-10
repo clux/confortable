@@ -28,7 +28,7 @@ var confPath = require('confortable')('.logule', process.cwd(), fallback);
 ## Installation
 
 ```bash
-$ npm install conf
+$ npm install confortable
 ```
 
 ## Running tests
