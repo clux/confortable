@@ -14,7 +14,7 @@ test("location", function (t) {
     join(cwd, '..', '..', name)
   , join(cwd, '..', name)
   , join(cwd, name)
-  ]
+  ];
 
   fs.writeFileSync(files[0], "{}");
   t.equal(conf(name), files[0], "conf finds 2 up");
@@ -38,7 +38,7 @@ test("home border", function (t) {
   var files = [
     join(cwd, '..', name)
   , join(cwd, name)
-  ]
+  ];
 
   fs.writeFileSync(files[0], "{}");
   t.equal(conf(name), undefined, "conf does not find above HOME");

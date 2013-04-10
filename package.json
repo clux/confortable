@@ -16,7 +16,7 @@
   ],
   "main": "confortable.js",
   "scripts": {
-    "test": "tap ./test"
+    "test": "tap ./test/*.js"
   },
   "devDependencies": {
     "tap": "~0.3.1"
