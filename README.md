@@ -1,4 +1,7 @@
-# Confortable [![Build Status](https://secure.travis-ci.org/clux/confortable.png)](http://travis-ci.org/clux/confortable) [![Dependency Status](https://david-dm.org/clux/confortable.png)](https://david-dm.org/clux/confortable)
+# Confortable
+[![Build Status](https://secure.travis-ci.org/clux/confortable.png)](http://travis-ci.org/clux/confortable)
+[![Dependency Status](https://david-dm.org/clux/confortable.png)](https://david-dm.org/clux/confortable)
+[![stable](http://hughsk.github.io/stability-badges/dist/stable.svg)](http://nodejs.org/api/documentation.html#documentation_stability_index)
 
 Confortable is a super lightweight config file selector/finder for nodejs. It will look at the execution cwd, and if no config matching the name is found, and the cwd is inside $HOME, it will keep going up one directory until it hits $HOME. Example usage can be seen in [logule](https://github.com/clux/logule/blob/master/logule.js#L6). and [combustion](https://github.com/clux/combustion/blob/master/lib/precompiler.js#L4).
 
