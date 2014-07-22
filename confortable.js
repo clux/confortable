@@ -1,14 +1,12 @@
 var exists = require('fs').existsSync
-  , path = require('path')
-  , HOME;
-
-var withinHome = function (dir) {
-  return (path.relative(HOME, dir).slice(0, 2) !== '..');
-};
+  , path = require('path');
 
 var findFromStart = function (name, start) {
-  // set HOME in here, so that tests can monkey-patch process.env.HOME
-  HOME = process.env.HOME || process.env.HOMEDRIVE + process.env.HOMEPATH;
+  var HOME = process.env.HOME || process.env.HOMEDRIVE + process.env.HOMEPATH;
+  var withinHome = function (dir) {
+    return (path.relative(HOME, dir).slice(0, 2) !== '..');
+  };
+
   start = start || process.cwd();
   var relative = path.relative(HOME, start)
     , noRelation = (relative === start) // i.e. different drive or undefined HOME
@@ -41,7 +39,6 @@ var findFromStart = function (name, start) {
     }
   }
 };
-
 
 module.exports = function (name, start, fallbackDir) {
   var result = findFromStart(name, start);
