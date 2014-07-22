@@ -15,7 +15,7 @@
     "comfortable",
     "nottypo"
   ],
-  "main": "confortable.js",
+  "main": "index.js",
   "scripts": {
     "test": "$(npm bin)/nodeunit --reporter=verbose test/*.js",
     "instrument": "$(npm bin)/jscoverage lib",
