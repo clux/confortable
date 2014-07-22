@@ -1,3 +1,7 @@
+0.2.2 / 2014-07-22?
+==================
+  * Documentation and coverage release.
+
 0.2.1 / 2013-04-10
 ==================
   * Better windows support by using env.HOMEDIR and env.HOMEDRIVE (thanks agsh)
