@@ -3,6 +3,7 @@
   "name": "confortable",
   "description": "Finds the right recursively placed config file",
   "version": "0.2.1",
+  "stability": "stable",
   "repository": {
     "type": "git",
     "url": "clux/confortable"
@@ -16,13 +17,12 @@
   ],
   "main": "confortable.js",
   "scripts": {
-    "test": "tap ./test/*.js"
+    "test": "$(npm bin)/nodeunit test/*.js"
   },
   "devDependencies": {
-    "tap": "~0.4.4"
-  },
-  "engines": {
-    "node": ">= 0.8"
+    "nodeunit": "^0.9.0",
+    "jscoverage": "^0.5.5",
+    "coveralls": "^2.11.1"
   },
   "license": "MIT"
 }

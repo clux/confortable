@@ -1,10 +1,9 @@
 var conf = require('../')
-  , fs   = require('fs')
-  , test = require('tap').test
+  , fs = require('fs')
   , join = require('path').join;
 
 
-test("location", function (t) {
+exports.location = function (t) {
   var cwd = process.cwd();
   var name = '.confconf';
 
@@ -26,10 +25,10 @@ test("location", function (t) {
   t.equal(conf(name), files[2], "conf finds in root");
 
   files.map(fs.unlinkSync);
-  t.end();
-});
+  t.done();
+};
 
-test("home border", function (t) {
+exports.homeBorder = function (t) {
   var cwd = process.cwd();
   var name = '.confconf';
 
@@ -47,5 +46,5 @@ test("home border", function (t) {
   t.equal(conf(name), files[1], "conf finds in cwd");
 
   files.map(fs.unlinkSync);
-  t.end();
-});
+  t.done();
+};
