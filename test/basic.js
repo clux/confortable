@@ -1,10 +1,9 @@
 var conf = require('../')
   , fs = require('fs')
-  , join = require('path').join;
-
+  , join = require('path').join
+  , cwd = process.cwd();
 
 exports.location = function (t) {
-  var cwd = process.cwd();
   var name = '.confconf';
 
   // only really works if test server allows writing files.length levels above cwd
@@ -29,7 +28,6 @@ exports.location = function (t) {
 };
 
 exports.homeBorder = function (t) {
-  var cwd = process.cwd();
   var name = '.confconf';
 
   process.env.HOME = join(cwd, name); // pretend we're in HOME
@@ -46,5 +44,15 @@ exports.homeBorder = function (t) {
   t.equal(conf(name), files[1], "conf finds in cwd");
 
   files.map(fs.unlinkSync);
+  t.done();
+};
+
+exports.fallback = function (t) {
+  var name = '.confconf';
+  var fallbackDir = join(__dirname, 'fbdir');
+  var expectedFallback = join(fallbackDir, name);
+
+  t.equal(conf(name, cwd), null, 'no conf found in cwd');
+  t.equal(conf(name, cwd, fallbackDir), expectedFallback, 'found fallback');
   t.done();
 };
