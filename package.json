@@ -15,10 +15,10 @@
     "comfortable",
     "nottypo"
   ],
-  "main": "index.js",
+  "main": "confortable.js",
   "scripts": {
     "test": "nodeunit --reporter=verbose test/*.js",
-    "instrument": "jscoverage lib",
+    "instrument": "jscoverage confortable.js",
     "coverage": "CONFORTABLE_COV=1 nodeunit --reporter=lcov test/*.js",
     "coveralls": "npm run coverage | coveralls"
   },

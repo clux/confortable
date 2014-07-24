@@ -1,4 +1,4 @@
-var conf = require('../')
+var conf = require(process.env.CONFORTABLE_COV ? '../confortable-cov.js' : '../')
   , fs = require('fs')
   , join = require('path').join
   , cwd = process.cwd();
