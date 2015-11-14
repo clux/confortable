@@ -3,7 +3,6 @@
   "name": "confortable",
   "description": "Finds the right recursively placed config file",
   "version": "0.2.2",
-  "stability": "stable",
   "repository": {
     "type": "git",
     "url": "clux/confortable"
@@ -19,13 +18,11 @@
   "scripts": {
     "test": "nodeunit --reporter=verbose test/*.js",
     "instrument": "jscoverage confortable.js",
-    "coverage": "CONFORTABLE_COV=1 nodeunit --reporter=lcov test/*.js",
-    "coveralls": "npm run coverage | coveralls"
+    "coverage": "CONFORTABLE_COV=1 nodeunit --reporter=lcov test/*.js"
   },
   "devDependencies": {
     "nodeunit": "^0.9.0",
-    "jscoverage": "^0.5.5",
-    "coveralls": "^2.11.1"
+    "jscoverage": "^0.5.5"
   },
   "license": "MIT"
 }

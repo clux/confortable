@@ -3,7 +3,6 @@
 [![build status](https://secure.travis-ci.org/clux/confortable.svg)](http://travis-ci.org/clux/confortable)
 [![dependency status](https://david-dm.org/clux/confortable.svg)](https://david-dm.org/clux/confortable)
 [![coverage status](http://img.shields.io/coveralls/clux/confortable.svg)](https://coveralls.io/r/clux/confortable)
-[![stable](http://img.shields.io/badge/stability-stable-74C614.svg)](http://nodejs.org/api/documentation.html#documentation_stability_index)
 
 Confortable is a lightweight config file locator. It will look at the execution cwd, and if no config matching the name is found, and the cwd is inside $HOME, it will keep going up one directory until it hits $HOME. Example usage can be seen in [logule](https://github.com/clux/logule/blob/master/logule.js#L6). and [combustion](https://github.com/clux/combustion/blob/master/lib/precompiler.js#L4).
 
@@ -35,19 +34,6 @@ var confPath = require('confortable')('.logule', process.cwd(), fallback);
 
 ```bash
 $ npm install confortable
-```
-
-## Running tests
-Install development dependencies
-
-```bash
-$ npm install
-```
-
-Run the tests
-
-```bash
-$ npm test
 ```
 
 ## License

@@ -1,3 +1,8 @@
+1.0.0 / 2015-11-15
+==================
+  * Added npmignore
+  * No other changes - just should be indicated as stable
+
 0.2.2 / 2014-07-22
 ==================
   * Documentation and coverage release.
