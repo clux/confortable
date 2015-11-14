@@ -17,7 +17,7 @@
   "main": "confortable.js",
   "scripts": {
     "test": "nodeunit --reporter=verbose test/*.js",
-    "instrument": "jscoverage confortable.js",
+    "precoverage": "jscoverage confortable.js",
     "coverage": "CONFORTABLE_COV=1 nodeunit --reporter=lcov test/*.js"
   },
   "devDependencies": {
